@@ -1,3 +1,5 @@
+import { getCarName } from "./getCarName.js";
+
 const getRandomNum = () => {
   return Math.floor(Math.random() * 10);
 };
