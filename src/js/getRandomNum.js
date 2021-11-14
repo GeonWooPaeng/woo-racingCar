@@ -1,6 +1,6 @@
 const checkRandomNum = (randomNum) => {
-  if (randomNum > 4) return 1;
-  return 0;
+  if (randomNum > 4) return 0;
+  return 1;
 };
 
 export const getRandomNum = () => {

@@ -1,19 +1,37 @@
 import { getRandomNum } from "./getRandomNum.js";
 
+const updateCarMove = (car) => {
+  const $carPlayerActions = document.querySelectorAll(".car-player-action");
+
+  $carPlayerActions.forEach(($carPlayerAction) => {
+    const $moveSection = $carPlayerAction.querySelector(".move-section");
+    const $spinnerContainer = $moveSection.querySelector(".spinner-container");
+    let $carPlayer = $carPlayerAction.querySelector(".car-player");
+
+    if ($spinnerContainer) $moveSection.innerHTML = "";
+    if ($carPlayer.innerHTML === car.name) {
+      $moveSection.insertAdjacentHTML(
+        "beforeend",
+        `<div class="forward-icon mt-2">⬇️️</div>`
+      );
+    }
+  });
+};
+
 const checkCarTry = (carTry) => {
   return carTry > -1 && carTry < 10;
 };
 
 const moveCar = (carTry, carList) => {
-  const $carPlayerActions = document.querySelectorAll(".car-player-action");
-
   for (let i = 0; i < carTry; i++) {
-    $carPlayerActions.forEach(($carPlayerAction) => {
-      if (getRandomNum()) {
-        moveCarPlayer($carPlayerAction);
+    carList.forEach((car) => {
+      if (!getRandomNum()) {
+        car.cnt += 1;
+        updateCarMove(car);
       }
     });
   }
+  console.log(carList);
 };
 
 export const getCarTry = (carList) => {

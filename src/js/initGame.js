@@ -1,4 +1,4 @@
-import { getCarTry } from "../getCarTry.js";
+import { getCarTry } from "./getCarTry.js";
 
 export const initGame = (carList) => {
   const $carTrySubmit = document.querySelector("#car-try-submit");

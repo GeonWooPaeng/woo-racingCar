@@ -11,12 +11,14 @@ const actionPlayerHTML = (carName) => {
     "beforeend",
     `<div class="mr-2 car-player-action">
         <div class="car-player">${carName.name}</div>
-        <div class="d-flex justify-center mt-3">
-          <div class="relative spinner-container">
-            <span class="material spinner"></span>
+        <div class="move-section">
+          <div class="d-flex justify-center mt-3">
+            <div class="relative spinner-container">
+              <span class="material spinner"></span>
+            </div>
           </div>
-      </div>
-      </div>`
+        </div>
+    </div>`
   );
 };
 
