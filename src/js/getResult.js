@@ -9,15 +9,19 @@ const getMaxMove = (carList) => {
   return maxMove;
 };
 
+const alertResult = (winner) => {
+  alert(`${winner} 축하합니다.`);
+};
+
 const setResult = (result) => {
   const $finalSection = document.querySelector("#final-section");
   let winner = result.join(", ");
 
-  console.log(winner);
   $finalSection.insertAdjacentHTML(
     "afterbegin",
     `<h2 >🏆 최종 우승자: ${winner} 🏆</h2>`
   );
+  setTimeout(alertResult, 2000, winner);
 };
 
 export const getResult = (carList) => {
