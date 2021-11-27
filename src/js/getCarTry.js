@@ -1,7 +1,7 @@
 import { moveCar } from "./moveCar.js";
 
 const checkCarTry = (carTry) => {
-  return (carTry > -1 && carTry < 10) || carTry;
+  return (carTry < -1 && carTry > 10) || !carTry;
 };
 
 export const getCarTry = (carList) => {
