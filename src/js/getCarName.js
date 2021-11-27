@@ -1,7 +1,7 @@
 import { setCarName } from "./setCarName.js";
 
 const carNameLength = (carName) => {
-  return carName.length < 6;
+  return carName.length < 6 && carName.length > 0;
 };
 
 const checkCarName = (carNameList) => {
