@@ -19,7 +19,7 @@ const setResult = (result) => {
 
   $finalSection.insertAdjacentHTML(
     "afterbegin",
-    `<h2 >🏆 최종 우승자: ${winner} 🏆</h2>`
+    `<h2 id="game-result">🏆 최종 우승자: ${winner} 🏆</h2>`
   );
   setTimeout(alertResult, 2000, winner);
 };

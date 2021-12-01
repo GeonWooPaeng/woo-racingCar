@@ -1,14 +1,14 @@
 import { moveCar } from "./moveCar.js";
 
 const checkCarTry = (carTry) => {
-  return (carTry < -1 && carTry > 10) || !carTry;
+  return carTry > -1 && carTry < 10;
 };
 
 export const getCarTry = (carList) => {
   const $carTryInput = document.querySelector("#car-try-input");
   const carTry = $carTryInput.value;
 
-  if (!checkCarTry(carTry)) {
+  if (!checkCarTry(carTry) || !carTry) {
     $carTryInput.value = "";
     alert("자동차 시도 횟수가 잘못되었습니다.");
     return;
